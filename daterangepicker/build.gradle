@@ -48,7 +48,7 @@ afterEvaluate {
                 pom {
                     name = 'DateTimePicker'
                     description = 'DateTimePicker.'
-                    url = 'https://github.com/fanusradar/DateTimePickerAndroid'
+                    url = 'https://github.com/fanusradar/DateTimePicker'
 
                     developers {
                         developer {

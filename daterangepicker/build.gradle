@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        minSdkVersion 21
+
+        targetSdkVersion 33
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    namespace 'com.sardari.daterangepicker'
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.fanus.datetimepicker'
+                artifactId = 'DateTimePicker'
+                version = '1.0.0'
+
+                pom {
+                    name = 'DateTimePicker'
+                    description = 'DateTimePicker.'
+                    url = 'https://github.com/fanusradar/DateTimePickerAndroid'
+
+                    developers {
+                        developer {
+                            name = 'Masoud Alishahi'
+                            email = 'masoud.alishahi10@gmail.com'
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AwesomeCalendar</string>
+
+    <string name="mon">د</string>
+    <string name="tue">س</string>
+    <string name="wed">چ</string>
+    <string name="thu">پ</string>
+    <string name="fri">ج</string>
+    <string name="sat">ش</string>
+    <string name="sun">ی</string>
+
+    <string name="cancel">لغو</string>
+    <string name="done">تایید</string>
+    <string name="title_time_picker">انتخاب زمان</string>
+    <string name="select_time">Select a Time</string>
+    <string name="please_choose_time_range">لطفا بازه زمانی را مشخص کنید.</string>
+    <string name="to_choose_a_date_double_tap_on_same_date">برای انتخاب یک روز، بر روی تاریخ مورد نظر \n مجددا کلیک نمایید.</string>
+    <string name="confirm">تایید</string>
+    <string name="withdraw">انصراف</string>
+
+</resources>

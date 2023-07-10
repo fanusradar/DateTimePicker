@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlHeaderCalendar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:theme="@style/NoBackgroundColor"
+    android:background="@color/headerBackgroundColor">
+
+    <ImageView
+        android:id="@+id/imgVNavLeft"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_vector_navigate_left"
+        app:tint="@android:color/white"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/linNavHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_toLeftOf="@+id/imgVNavRight"
+        android:layout_toRightOf="@+id/imgVNavLeft"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvYearTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:tag="dateTitle"
+            android:text="فروردین 1397"
+            android:textColor="@color/header_title_color"
+            android:textSize="@dimen/text_size_title"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvYearGeorgianTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="June - July"
+            android:textColor="@color/header_title_color"
+            android:textSize="@dimen/text_size_subTitle"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgVNavRight"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_vector_navigate_right"
+        app:tint="@android:color/white"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>
